@@ -5,16 +5,12 @@ from scipy.optimize import curve_fit
 from scipy import stats
 import statsmodels.api as sm
 
-# ==================================================================
-# DATOS EXPERIMENTALES
-# ==================================================================
-S = np.array([80, 100, 150, 200, 250, 300], dtype=float)  # [S] en mM
-Vo = np.array([0.003404945, 0.007519254, 0.008966356, 
-               0.011321443, 0.015464126, 0.017251723], dtype=float)  # Vo en mM/seg
 
-# ==================================================================
-# MODELO MICHAELIS-MENTEN
-# ==================================================================
+S = np.array([80, 100, 150, 200, 250, 300], dtype=float)  # [S] en mM
+Vo = np.array([0.007066, 0.007519254, 0.010251723, 
+               0.011321443, 0.01313966356, 0.015464126], dtype=float)  # Vo en mM/seg
+
+
 def michaelis_menten(s, Vmax, Km):
     return (Vmax * s) / (Km + s)
 
